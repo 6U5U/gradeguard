@@ -1,0 +1,26 @@
+required_files:
+  - README.md
+  - src/main.py
+
+# Each entry is a regular expression checked against included source files.
+forbidden_patterns:
+  - "\\bTODO\\b"
+  - "print\\("
+
+include:
+  - "**/*.py"
+
+exclude:
+  - ".git/**"
+  - ".venv/**"
+  - "venv/**"
+  - "build/**"
+  - "dist/**"
+
+max_file_size_kb: 1024
+
+tests:
+  command: "python -m pytest -q"
+  timeout_seconds: 120
+  minimum_count: 5
+
